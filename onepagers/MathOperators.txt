@@ -1,0 +1,31 @@
+# Math Operators
+
+A quick reminder of some of the math **operators** you can use in Ruby (and most other programming languages).
+
+Here are the basic math symbols:
+
+Operator | Description
+--- | ---
+\+ | Addition
+\- | Subtraction
+\* | Multiplication
+\ | Division 
+% | Modulo (returns the remainder of division)
+
+These work exactly as you'd expect, except division.
+
+Dividing **integers** (whole numbers) returns only a whole integer quotient:
+
+    7 / 3 = 2
+
+Of at least one of the numbers has a decimal point (a floating-point value, or **float**), you'll get a decimal result:
+
+    7.0 / 3 = 2.3333333333333335
+
+The **modulo** operator gives you just the remainder of the integer division operation:
+
+    7 / 3 = 2
+    7 % 3 = 1
+
+More than you probably wanted to know.
+

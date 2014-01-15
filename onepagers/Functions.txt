@@ -1,0 +1,49 @@
+# Functions
+
+Functions are little programs that we write within a bigger program. We write them once and can use them over and over.
+
+The **def** keyword starts a function, and the **end** keyword ends the function.
+
+    def *function name*
+        *command to do*
+    end
+
+The **function name** is the name we will use when we want to call the function. The command is the code we want to run when we call the function. It can be one line or many, many lines, and can even call still other functions.
+
+    def starting
+        puts "Once upon a time..."
+    end
+
+Now, when you want to print "Once upon a time..." in your program, you can just type:
+
+    starting
+
+Functions can take **arguments**, variables you give to the function to use.
+
+    def friend(name)
+        print "My friend is " + name
+    end
+
+Here you will pass a string to the friend function, and within the function that string is contained in a variable called name.
+
+A function can use zero, one, two or more arguments. Just separate them with commas.
+
+Include the arguments when you call a function like this:
+
+    friend("Sophie")
+
+You can provide a string like this, or a variable that contains a string.
+
+Functions can have return values:
+
+    def moodchanger
+        return "Happy!"
+    end
+
+    my_mood = moodchanger  # My mood is now "Happy!"
+
+Whatever is returned by the function can be assigned to a variable or used as input for another function.
+
+
+
+

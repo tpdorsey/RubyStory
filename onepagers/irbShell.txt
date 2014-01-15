@@ -1,0 +1,30 @@
+# irb - Interactive Ruby Shell
+
+irb, the Interactive Ruby Shell, is a program you can run in Terminal that lets you type and run Ruby code interactively. Instead of typing your code in a file, then running the file, irb lets you see immediately what's happening in your program.
+
+To use irb, go to terminal and type:
+
+    irb
+
+You'll get a prompt that looks something like this:
+
+    irb(main):001:0>
+
+You can type or paste in code (line by line). I find this useful for testing ideas out and experimenting.
+
+Handy tip: when you execute a command or finish defining a function or variable, irb will print out a message, usually something like this:
+
+    => nil
+
+This is the value returned by the function. Often this is nothing (nil) unless the command or function you ran explicitly returns a value:
+
+    irb(main):003:0> def example
+    irb(main):005:1>   return 0
+    irb(main):006:1> end
+    => nil
+    irb(main):007:0> example
+    => 0
+
+When you're finished, type *exit*, *quit* or press Ctrl+D to exit irb and return to the Terminal prompt.
+
+You can also find an irb-like interactive Ruby console on the [Try Ruby](http://tryruby.org/levels/1/challenges/0) web site.

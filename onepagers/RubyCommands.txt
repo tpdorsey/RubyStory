@@ -1,0 +1,59 @@
+# Ruby Commands
+
+Here's a quick reminder of the Ruby commands and patterns we covered.
+
+Command | Description
+--- | ---
+puts | Print a message to the terminal
+print | Print a message, without a line return
+gets.chomp | Capture input as a string
+Integer(gets.chomp) | Capture input as a number
+\# | Comment the rest of the line
+\#{variable} | Inline variable substitution in a string
+%s | Placeholder for a string variable in a string
+%d | Placeholder for a number variable in a string
+
+Assign a variable:
+
+    variable_name = variable_value
+
+Substituting a variable in a string:
+
+    puts "My name is #{name}."
+    puts "This is a string: %s." % name
+    puts "This is a number: %d." % number
+
+Capturing input to a variable:
+
+    name = gets.chomp
+    number = Integer(gets.chomp)
+
+Simple if statement:
+
+    if statement
+        command to do
+    end
+
+An if...elsif...else statement:
+
+    if statement 1
+        command to do if statement 1 is true
+    elsif statement 2
+        command to do if statement 2 is true
+    else
+        command to do if all statements are false
+    end
+
+A function statement:
+
+    def function name
+        command to do
+    end
+
+A function that takes a variable as input:
+
+    def function name(variable)
+        command to do
+    end
+
+That's pretty much all we covered. You can write a lot of code with just this.

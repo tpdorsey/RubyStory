@@ -1,0 +1,27 @@
+# Terminal Commands
+
+This is just a reminder of some of the Terminal commands we'll use in this class. There are many, many more commands you can learn about, but these are good to start.
+
+Command | Description
+--- | ---
+whoami | Prints the name of the current user
+date | Prints the current date and time
+pwd | Prints the name of the current folder
+ls | Lists all of the files and folders within the current folder
+cd [folder] | Change to the specified folder
+cd .. | Go back one folder level
+cat [file] | Prints out the contents of a file
+open . | Opens a Finder window showing the current folder
+open [file] | Opens the file in the default editor
+irb | Starts the Interactive Ruby Shell
+ruby [file] | Runs any Ruby code in the file
+
+In Terminal, there are some other handy key commands to know:
+
+Keys | Command
+--- | ---
+Ctrl+C | Cancel a command
+Ctrl+D | End of file (stops many interactive programs, like irb)
+q | Quits some text viewers, like man pages
+↑ and ↓ | Cycle through command history
+Tab | Completes what you're typing (sometimes)

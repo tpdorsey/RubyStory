@@ -1,0 +1,29 @@
+# Global Variables
+
+Previously we talked about variables and variable scope, and how variables can only be used within the function in which they were created. These are called **local variables**.
+
+As you've seen, you can pass local variable values into and out of functions, which is handy.
+
+In Ruby you can create **global variables** that can be used and changed *anywhere* in your program, even within other functions.
+
+Global variables are considered dangerous because it's so easy to change them with consequences you might not have considered. So please use global variables *very, very carefully* in your programs.
+
+You create a global variable by starting the variable's name with a $ symbol:
+
+    $my_variable = "This is a global variable."
+
+Remember that it's part of the name and you have to use it when you reference the variable, too.
+
+    $name = "Charlie"
+    
+    def friends
+        puts "My friend is " + $name
+        $name = "Barbara"
+    end
+
+    friends
+    friends
+
+Here's a good example of what can happen. The friends function uses the $name variable directly, but then changes it directly. Any other function that wants to use $name gets Barbara now.
+
+Sometimes you want to do this, but think through the consequences carefully.

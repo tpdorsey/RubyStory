@@ -1,0 +1,617 @@
+# Programming with Ruby
+
+
+## What is Programming?
+
+Written instructions that tell the computer how to do various tasks.
+
+Programs can be very simple or very complex. Everything that happens on your computer when you turn it on is controlled by programs somebody wrote.
+
+Your Mac comes with a bunch of programming tools already installed: 
+
+* AppleScript
+* Automator
+* Bash
+* PHP
+* Python
+* Ruby
+* Xcode and Objective-C
+
+We're going to use Ruby. It was written by a man named Yukihiro Matsumoto (Matz) in 1995.
+
+## Finder and Applications
+
+First, let's talk about your computer and what it can do:
+
+Hardware: the physical computer, the screen... What else?
+
+Software: the operating system, the browser, Finder... What else?
+
+How do we find files? How do we run programs?
+
+* Use Finder (Go to Applications, double-click a program)
+* Use Spotlight (⌘+Space, also known as Command+Space) and type the name
+* Use Terminal
+
+We're going to mostly use Terminal, and we're going to write our own programs that run in Terminal.
+
+## Terminal
+
+Terminal is a "command-line interface" to the system. 
+
+In the early days of computers, on systems like Unix and MS-DOS, this was the only way to use the computer. Even today, Linux, Windows and Mac OS X still provide a "terminal" interface for typing commands.
+
+You type a command, and the computer does some work for you.
+
+Open Terminal. 
+
+What do we see: 
+
+* The name of your computer
+* The current folder (also sometimes called a directory)
+* The current user's name
+* The command prompt, usually $
+
+Let's start doing something with this prompt. Type this command, then press Enter:
+
+    whoami
+
+It should show your login name. Now type:
+
+    date
+
+It prints out the current date and time. Try typing:
+
+    pwd
+
+This means "print working directory." Many commands use a name like this. pwd shows where you are in the system. [Explain folders.]
+
+Here's a neat trick: 
+
+    open .
+
+What did that do? It opened Finder showing the current folder. Now type:
+
+    ls
+
+Look closely at the message printed from the ls command, then compare it to the Finder window you just opened. Notice that they show the same thing!
+
+Customize Terminal by selecting one of the different styles.
+
+### Writing Code In A Text Editor
+
+We use simple "text" files for a lot of programming. We need a program to write them in that doesn't add any formatting. [Explain...]
+
+Open TextEdit. Let's do some setup to make it work better for programming:
+
+Open TextEdit > Preferences.
+
+* Click the button next to Plain text
+* Uncheck the boxes next to Smart quotes and Smart dashes.
+
+Close the open TextEdit document: ⌘+W or click the X button in the top-left corner of the window.
+
+## Creating a File
+
+Terminal (via its Unix roots) has redirects and pipes. 
+
+* **Pipes** use the | character to use the output of one command directly as the input to another command. It's a powerful tool, but we're not going to use it right now.
+* **Redirects** let you either send the output of a command directly to a file (>) or use the contents of a file as the input for a command (<). 
+
+Here's a really simple example to get started:
+
+    whoami > hello.rb
+
+The output of the whoami command (your user name) is written to a file called hello.rb. 
+
+The ".rb" part of the name tells us it contains Ruby code. [Talk a little about extensions - txt, doc, py, rb...]
+
+Open the file in your default text editor (usually TextEdit):
+
+    open -e hello.rb
+
+The "-e" option, which is one of many options for open (show [open man page](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/open.1.html)). "hello.rb" tells the program which file to open.
+
+Your user name is there. 
+
+## Your First Ruby Program
+
+Tell the computer what to do with it. We're going to write our first simple Ruby code to print out a message. Use your user name instead of mine. It should be in the file already:
+
+    puts "tpdorsey"
+
+The puts command prints the message in quotes out in the terminal. Save the file (⌘+S) , go back to Terminal and type:
+
+    ruby hello.rb
+
+This runs the **Ruby interpreter** on the commands in hello.rb. What do you see?
+
+Add a bit to this message. Go back to TextEdit and edit the file to look something like this (using your name instead of mine):
+
+    puts "Hello, my name is Terry."
+    puts "This is my program."
+
+Save it, go back to Terminal and run ruby hello.rb again. 
+
+You can press the up and down arrows to cycle through a history of commands.
+
+### Errors - We All Make Mistakes
+
+Sometimes you'll get an error instead of the expected results. It will look something like this. [Talk about errors and what they mean] 
+
+    hello.txt:1: syntax error, unexpected tINTEGER, expecting end-of-input
+    puts "2 + 2 is " 2 + 2
+                      ^
+
+It's OK to make mistakes. All programmers run into errors all the time. Read the error message, try to figure out why it happened, try to fix it, and run it again.
+
+## Math (Just A Little, I Promise)
+
+Demonstrate simple math and Boolean logic
+
+Go back to hello.rb and type the following (it's OK to replace what we had in the file).
+
+    puts 2 + 2
+    puts 10 - 3
+    puts 3 * 10
+    puts 7 / 2
+    puts 7 % 2
+
+Talk about simple math, whole division (quotient and remainder).
+
+Comparison operators: type the following in hello.rb:
+
+    puts 5 > 3
+    puts 5 < 3
+    puts 5 == 5
+    puts 5 != 3
+    puts "five" == 5
+
+The basic things to note here:
+
+* Math works mostly like you'd expect
+* True and False results are called **Boolean** logic
+* == and = have different meanings: == means "is the same as"
+* Compare the same kinds of things or you'll get weird results
+
+What "kinds of things" do we use?
+
+## Numbers and Strings
+
+Types of things we work with in programs: 
+
+* numbers
+* strings
+* objects
+* arrays or collections (groups of similar numbers, strings or objects) 
+
+**Numbers** are things we count things with. 
+
+**Strings** contain letters, words and symbols. Strings are surrounded by "" or '' quotation marks.
+
+5 is a number, but "5" is a string - they are *not* the same thing as we saw earlier.
+
+Programmers call this the **type** of the variable.
+
+## Comments Help You Remember
+
+If you start a line of Ruby code with a # symbol, that line gets ignored. This is called a **comment**.
+
+    # This line does nothing. It's a comment.
+    puts "This line still does something."
+
+You can use comments to leave notes for yourself, which can be helpful in really long programs.
+
+You can also **comment out** parts of your program so they don't run anymore.
+
+    # puts "This line does nothing."
+
+Just a handy trick.
+
+## Variables - Naming Things
+
+A **variable** is a name we give to an object in a program so we can reference it conveniently within the program.
+
+You can think of them as placeholders or references to the thing you want. Variables are useful because the actual value may be complex (like a very long string or number) or you may not know its value until the program runs.
+
+You **assign** a variable with a = symbol like this:
+
+    variable_name = variable_value
+
+In this case = means "is equal to" or "has the value". Here's a variable named name with the value "Terry":
+
+    name = "Terry"
+
+In hello.rb, create a few variables:
+
+    name = "Terry"
+    food = "donuts"
+    number = 100
+
+Now we can use these variables by **referencing** them in some strings:
+
+    puts "My name is #{name}."
+    puts "I ate #{number} #{food} yesterday."
+
+Another way of referencing variables is a **format string**:
+
+    puts "My name is %s." % name
+    puts "I ate %d %s yesterday." % [number, food]
+
+Here %d says you're going to substitute a number (decimal) and %s says you're going to substitute a string.
+
+You can do math on a variable when you assign it:
+
+    another_number = number + 3
+
+You can do math in the variable substitution, too:
+
+    puts "That's %d dozen." % [number / 12]
+
+The important thing to remember is that the program **resolves** the variable before printing it. If the variable does not exist or there's a problem computing it, you'll get an error.
+
+Try this one:
+
+    one = "A"
+    two = "B"
+    three = "C"
+    format = "%s %s %s"
+    
+    puts "I know my %s %s %s's" % [one, two, three]
+    puts format % [one, two, three]
+
+You can also use the + symbol to combine variables, *but only if they are the same **type***. 
+
+    puts one + two + three
+
+Notice that you have to add spaces, though.
+
+    puts one + " " + two + " " + three
+
+What happens if you assign a variable, but don't use it?
+
+What happens if you try to use a variable that you haven't assigned?
+
+## Asking Questions, Getting Answers
+
+Now let's learn how to interact with the program. We can ask for **input**, and save what the user types in a variable:
+
+    print "What is your name? "
+    name = gets.chomp
+    puts "Oh, your name is #{name}."
+
+By default, **gets.chomp** saves input as a string. You can specify that input is a number:
+
+    print "Give me a number: "
+    number = Integer(gets.chomp)
+
+Because you're assigning the input to a variable, you can use it like any of the other variables we've played with so far:
+
+    print "What is your favorite food? "
+    food = gets.chomp
+    
+    puts "I ate %d %s yesterday." % [number, food]
+
+What's the difference between **puts** and **print**? Print does *not* include a line break after the printed string.
+
+    print "Prints keeps everything on the same line, but... "
+    puts "Puts starts a new line after it prints."
+
+Not super important, but it can be handy to remember.
+
+## Making Decisions
+
+So far, you've been doing most of the work. Now let's learn about some commands that get the program to make some decisions. 
+
+We sometimes call this **flow control** because these commands determine which way the program "flows."
+
+Mostly these commands test a **statement** for **truthiness** and do something if the statement is true.
+
+### True or False
+
+Earlier we noted that some operations return **true** or **false** as the result. This is called **Boolean** logic, but some people call it truthiness.
+
+* < Less Than
+* \> Greater Than
+* == Equal To
+* <= Less Than Or Equal To
+* \>= Greater Than Or Equal To
+* ! Not (Opposite Of)
+* != Not Equal To
+
+The nice thing about this: we always know the result will be either true or false, but nothing else.
+
+    alice = 2
+    bob = 3
+
+    puts bob > alice     # Is bob greater than alice?
+    puts bob < alice     # Is bob less than alice?
+    puts bob != alice    # Is bob not equal to alice?
+    puts !(bob != alice) # The opposite of "is bob not equal to
+                         # alice?"
+
+We don't need to print out "true" or "false". We can just use that value to decide whether to do something else.
+
+Let's try a simpler example. For strings, the letters are either the same as what we expect or they're not:
+
+    potion = "red"
+    sky = "blue
+    puts potion == "blue"
+    puts sky == "blue"
+
+We can do a lot with simple "is the same as" matching.
+
+### If
+
+If is the simplest flow control statement. The way we type it is important, so it should look like this:
+
+    if *statement*
+        *command to do*
+    end
+
+If the statement is true, do something. If the statement is false, skip to end without doing anything.
+
+    if bob > alice
+        puts "bob is older than alice."
+    end
+
+In this case, the message is only printed if 3 is greater than 2. What happens if you change the statement to bob < alice?
+
+We can **nest** if statements, which means putting in if statement inside another if statement:
+
+    if alice == 2
+        puts "Alice is 2."
+        
+        if bob > alice
+            puts "Bob is older than Alice."
+        end
+    end
+
+Change bob to 1. What happens?
+
+### Else and Elsif
+
+Else and elsif ("else if") extend the if statement. 
+
+Else provides a default action to do whenever the if statement is false. You can think of it in a few different ways, whichever makes more sense:
+
+If the statement is true, do something. If the statement is false, do something *else*. 
+
+Or:
+
+If the statement is true, do this. Otherwise, do that.
+
+    if *statement*
+        *command to do if statement is true*
+    else
+        *command to do if statement is false*
+    end
+
+Elsif lets you include additional if statements within the same command rather than nesting them. 
+
+    if *statement 1*
+        *command to do if statement 1 is true*
+    elsif *statement 2*
+        *command to do if statement 2 is true*
+    else
+        *command to do if all statements are false*
+    end
+
+You can provide an else statement with elsif, but it's not required.
+
+    puts "You are in a large room."
+    puts "There are two potions: red and blue."
+    puts "Which do you drink (red or blue)?"
+
+    potion = gets.chomp
+
+    if potion.downcase == "red"
+        puts "You drink the red potion."
+        puts "You burn in a conflagration of flames."
+    elsif potion.downcase == "blue"
+        puts "You drink the blue potion."
+        puts "You freeze in a column of ice."
+    else
+        puts "Goodbye."
+    end
+
+Now we're getting somewhere interesting.
+
+## Functions - Programs Within Programs
+
+Functions are little programs that we write within a bigger program. We write them once and can use them over and over.
+
+Notice that we use a **syntax** that's similar to the if statement. Syntax means "how we write it".
+
+    def *function name*
+        *command to do*
+    end
+
+Read this as "define function *name*, do these commands, then end."
+
+Here's a function called "starting":
+
+    def starting
+        puts "Once upon a time..."
+    end
+
+Now "starting" works like a command in your program and prints out "Once upon a time..." any time you call it. You just type:
+
+    starting
+
+Functions can take **arguments**, variables you give to the function to use.
+
+    def friend(name)
+        print "My friend is " + name
+    end
+
+(Notice that, because all of the things here are the same kinds of things - strings - we can add them up!)
+
+A function can use zero, one, two or more arguments. Just separate them with commas. But it's *really* important to remember how many arguments are expected, and what kind of variable is expected.
+
+Include the arguments when you call a function like this:
+
+    friend("Sophie")
+
+Note that they are strings. We could also pass variables (but they *must* hold strings).
+
+    name = "Niall"
+    friend(name)
+
+Functions can do work and return a value:
+
+    def friend(name)
+        capitalized_name = name.upcase
+        words = "Shouting my friend's name: " + capitalized_name
+        return words
+    end
+
+You can do pretty much anything in a function that you can do elsewhere in your program:
+
+    def colors(your_color)
+        if your_color == "purple"
+            puts "I love purple, too!"
+        else
+            puts "That's a nice color (yawn)..."
+        end
+    end
+    
+    print "What's your favorite color? "
+    your_color = gets.chomp
+    
+    colors(your_color)
+
+You could even put the prompt within a function so you could re-use the code whenever you wanted to ask a question:
+
+    def prompt(question)
+        print question
+        answer = gets.chomp
+        return answer.downcase
+    end
+
+    your_color = prompt("What's your favorite color? ")
+    colors(your_color)
+
+It takes more planning to create and use functions like this, but is a very powerful way to create a program.
+
+### Functions and Global Variables
+
+The variables we've used so far are **local variables**. Local variables can be used only within the current function.
+
+There are **global variables** that can be used anywhere in your program. 
+
+Global variable names start with a $ character:
+
+    $global_variable = "You can use this anywhere."
+
+This is powerful, but dangerous.
+
+    $name = "Charlie"
+    
+    def friends
+        puts "My friend is " + $name
+        $name = "Barbara"
+    end
+
+    friends
+    friends
+
+You can access the global variable from any function, but you can also change it from any function... maybe unexpectedly. Be very, very careful.
+
+## A Story Program
+
+Now let's put everything we've learned so far together. We'll tell a story, and let the person who runs the program make choices about how the story proceeds.
+
+We start out simply:
+
+    puts "There are two potions: red and blue."
+    puts "Which do you drink?"
+    potion = gets.chomp
+
+Next, do something depending on which potion they choose:
+
+    if potion.downcase == "red"
+        puts "You drink the red potion."
+        puts "You burn in a conflagration of flames."
+    elsif potion.downcase == "blue"
+        puts "You drink the blue potion."
+        puts "You freeze in a column of ice."
+    else
+        puts "Goodbye."
+    end
+
+A nice start, but two problems: 
+
+* Nothing interesting happens if they type the wrong thing.
+* If we make the story longer, we have to repeat the question-and-answer code over and over.
+
+Let's fix that by making a function that asks the question:
+
+    def prompt(choice_1, choice_2)
+        print "(Type " + choice_1 + " or " + choice_2 + ") > "
+    end
+    
+    prompt("red", "blue")
+
+Better. What if the prompt function could do more, like print the question, chomp the answer and return it already converted to lowercase?
+
+    def prompt(choice_1, choice_2)
+        print "(Type %s or %s): " % [choice_1, choice_2]
+        answer = gets.chomp
+        return answer.downcase
+    end
+
+This is a good example of a good rule in programming: don't repeat yourself (DRY). 
+
+Now we can just call prompt with the options and put the result into a variable:
+
+    potion = prompt("red", "green")
+
+What if we put the story itself in a function?
+
+    def start
+        puts "There are red and green potions on the table."
+        puts "Which one do you drink?"
+        potion = prompt("red", "green")
+
+        if potion == "red"
+            puts "You drink the red potion."
+            puts "Fire burns your brain."
+        elsif potion == "green"
+            puts "You drink the green potion."
+            puts "Moss grows on your toes."
+        else
+            puts "You didn't answer the question."
+        end
+    end
+    
+    start
+
+You just have to call one function, start, and the story begins. Using the same **pattern**, add more functions for more parts of the story. Because we made prompt abstract it can be used anywhere in the story. We just have to tell it which options to allow.
+
+    def water
+        puts "You see a glass of water."
+        puts "Do you drink it or pour it on your head?"
+        glass = prompt("drink", "pour")
+
+        if glass == "drink"
+            puts "You drink the water."
+            puts "Ahhhh! Refreshing!"
+        elsif glass == "pour"
+            puts "You pour the water on your head."
+            puts "Your brain is cooler now."
+        else
+            puts "You can't do that. Your brain is still burning."
+        end
+    end
+
+And you can call these functions depending on the answer to a previous question:
+
+    if potion == "red"
+        puts "You drink the red potion."
+        puts "Fire burns your brain."
+        water
+
+By adding new functions, along with questions and answers that call them, you can extend the story as long as you like.
+
+When you're finished, give the .rb file to some friends and show them how to run your game.

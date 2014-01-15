@@ -1,0 +1,28 @@
+# Ruby Variables
+
+Variables are objects in your program that you create and name. Variables can values or objects that you can then **reference** by name, even if you don't know the value that will be in the variable. 
+
+Create a variable by giving it a name and assigning it a value by using the = symbol.
+
+    name = value
+
+Here's a variable named my_word that holds the word ketchup and a variable named my_number that holds the number 5:
+
+    my_word = "ketchup"
+    my_number = 5
+
+You can use the value in a variable by **referencing** the variable's name:
+
+    puts my_word     # prints out ketchup
+    puts my_number   # prints out 5
+
+You can combine variables together *if* they're the same type:
+
+    puts my_word + another_word + "words!"
+    puts my_number + another_number + 3
+
+You can even assign the value of one variable to another variable (we do this when passing variables to functions):
+
+    new_variable = my_word
+
+You must assign a variable (give it a name and a value) before you use it, otherwise you'll get an error and your program will stop.

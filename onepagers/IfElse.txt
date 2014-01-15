@@ -1,0 +1,31 @@
+# If Statements
+
+Simple if statement:
+
+    if statement
+        command to do
+    end
+
+An if...elsif...else statement:
+
+    if statement 1
+        command to do if statement 1 is true
+    elsif statement 2
+        command to do if statement 2 is true
+    else
+        command to do if all statements are false
+    end
+
+A function statement:
+
+    def function name
+        command to do
+    end
+
+A function that takes a variable as input:
+
+    def function name(variable)
+        command to do
+    end
+
+That's pretty much all we covered. You can write a lot of code with just this.

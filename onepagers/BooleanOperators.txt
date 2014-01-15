@@ -1,0 +1,41 @@
+# Boolean Operators
+
+**Boolean logic** boils down this: is a statement **true** or **false**? Is one thing the same as another? Is it bigger, or smaller?
+
+Here are the Boolean **operator** symbols we use in Ruby:
+
+Operator | Description
+--- | ---
+== | Equal to or the same as
+!= | Not the same
+< | Less than 
+\> | Greater than
+<= | Less than or equal to
+\>= | Greater than or equal to
+
+We always read these from left to right:
+
+Example | Meaning
+--- | ---
+A == B | A is the same as B
+A != B | A is not the same is B
+A < B | A is less than B
+A > B | A is greater than B
+
+You can think of it as asking a question: is A the same as B? If they are the same, it's true. If they are not the same, it's false.
+
+    "Alice" == "Alice" is true
+    5 < 3 is false (5 is less than 3? No, so false.)
+    7 > 5 is true (7 is greater than 5? Yes, so true.)
+    
+    Alice = "girl"
+    Bob = "boy"
+    Alice == Bob is false ("girl" is the same as "boy"? Nope.)
+
+The ! operator ("bang") **negates** the operation or returns the opposite result - it turns true into false and false into true.
+
+    !(false) is true
+    !(2 == 2) is false
+
+To start, most of the time you'll be using the == operators and asking "is this the same as that?"
+

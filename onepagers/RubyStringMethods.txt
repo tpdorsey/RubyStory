@@ -1,0 +1,42 @@
+# Ruby String Methods
+
+This is kind of an advanced concept, but you might find it useful to play with.
+
+We've talked about basic **types** of things so far: numbers (**integers**) and words (**strings**).
+
+Some programming languages have things called **objects**. Objects can contain numbers or words, but also have **properties** and **methods**.
+
+Properties contain information about the object: what's in it, how big it is.
+
+Methods are **functions** (actions) the object can do.
+
+In Ruby, everything is an object. Strings contain words, but also know how long the word is (a property), and do things to the word (using methods).
+
+You can **call** (use) a method by typing the variable name for the string, a period and the method you want to use. (This is called **dot syntax** by the big kids.) 
+
+    string_variable.method
+
+Other than that it's just like referencing a variable as we've done previously.
+
+    mystring = "Vorpal Sword"
+    
+    puts "My string is %s." % mystring
+    puts "My string is %d characters long." % mystring.length
+    puts "quietly: %s" % mystring.downcase
+    puts "YELLING: %s" % mystring.upcase
+
+Note that the string referenced by the variable name is not changed.
+
+    puts "%s is still the same." % mystring
+
+Here are a few of the interesting methods you can call on a string:
+
+* capitalize
+* chomp
+* downcase
+* length
+* reverse
+* swapcase
+* upcase
+
+There are many more. 

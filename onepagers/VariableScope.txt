@@ -1,0 +1,36 @@
+# Variable Scope
+
+Variables only exist within the **scope**, or the part of the program, in which they are created. A variable created outside of a function cannot be directly referenced (used) or assigned (changed) within a function.
+
+    my_variable = "Plate of Shrimp"
+
+    def my_function
+        # This won't work
+        puts my_variable 
+    end
+
+In fact, you'll get an error because you're referencing a variable that doesn't exist.
+
+You also can't create a variable within a function and use it directly anywhere else in your program.
+
+    def my_function
+        my_variable = "Plate of Shrimp"
+    end
+    
+    # This won't work either
+    puts my_variable
+
+You can pass variable values into and out of functions:
+
+    my_variable = "Plate of Shrimp"
+
+    def my_function(food)
+        return food 
+    end
+    
+    new_variable = my_function(my_variable)
+    puts new_variable
+
+Here "Plate of Shrimp" is first assigned to my_variable, then passed through the variable food, then returned by my_function and assigned to new_variable.
+
+This is nice because you're really making a copy of the value, not the variable itself. You could make all kinds of changes to the value of my_variable within your function, but my_variable stays the same and can be copied by other functions.

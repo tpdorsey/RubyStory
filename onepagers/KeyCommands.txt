@@ -1,0 +1,32 @@
+# Key Commands
+
+Learning to use the keyboard commands instead of always reaching for the menus will save you time and effort. You'll look cool, too.
+
+On your Mac, there are some special keys you should know because they're often used in combination with other keys to form keyboard commands, or key combinations. They're sometimes called modifier keys.
+
+Key | Description
+--- | ---
+⌘ | Command key
+⌥ | Option or Alt key
+⌃ | Control (Ctrl) key
+⇧ | Shift
+
+You can use these keys with other keys on the keyboard as an alternative method of running a menu command, like saving a file. Press the modifier key, then while holding that key down, press the other key:
+
+Keys | Command
+--- | ---
+⌘+S | Save
+⌘+O | Open
+⌘+Q | Quit
+⌘+W | Close the window (but don't quit the application)
+⌘+C | Copy
+⌘+V | Paste
+⌘+X | Cut
+⌘+A | Select all
+⌘+Z | Undo the last command
+⌘+Spacebar | Open Spotlight search
+⌘+P | Print
+
+Spotlight search is really hand: press ⌘+Spacebar, then start typing the name of the file or application you want. Spotlight will show you a list of matching things it finds on your computer. You can use the ↑ and ↓ arrow keys to select the one you want, then press Enter. 
+
+So much faster than opening a Finder window and looking for the thing you want.

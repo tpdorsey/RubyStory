@@ -1,0 +1,13 @@
+# Programming Symbols
+
+Here are some symbols and characters we often use in programming. It's good to know what they're called.
+
+Symbol | Name
+--- | ---
+\# | Pound or hash
+( ) | Parentheses
+{ } | Curly braces or brackets
+[ ] | Square brackets
+\! | Bang
+\\ | Backslash
+/ | Forward slash
