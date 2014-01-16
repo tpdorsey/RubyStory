@@ -1,9 +1,5 @@
 # RubyStory
 
-RubyStory is a collection of code and class notes to teach middle-school students programming fundamentals with Ruby.
-
-- - - - - - - - - -
-
 RubyStory is a basic, opinionated curriculum for teaching basic programming concepts to kids 10 and up. The materials include a course outline, code samples, handouts (one-pagers) and presentation slides.
 
 Specifically, RubyStory demonstrates just the minimum Ruby commands needed for students to write a choose-your-own-adventure style storytelling game. The class moves quickly through basic tasks, with a focus on fast results, building upon concepts, creativity and exploration.
