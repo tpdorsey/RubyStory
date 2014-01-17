@@ -5029,6 +5029,265 @@ puts "2 + 2 is " 2 + 2
             </div>
           </div>
         
+          <div class="">
+            <div id="slide-21" class="content">
+              <p>%d says you're going to substitute a number (decimal)</p><p>%s says you're going to substitute a string</p>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-22" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="n">another_number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">3</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-23" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="nb">puts</span> <span class="s2">"That's %d dozen."</span> <span class="o">%</span> <span class="o">[</span><span class="n">number</span> <span class="o">/</span> <span class="mi">12</span><span class="o">]</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-24" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="n">one</span> <span class="o">=</span> <span class="s2">"A"</span>
+<span class="n">two</span> <span class="o">=</span> <span class="s2">"B"</span>
+<span class="n">three</span> <span class="o">=</span> <span class="s2">"C"</span>
+<span class="nb">format</span> <span class="o">=</span> <span class="s2">"%s %s %s"</span>
+
+<span class="nb">puts</span> <span class="s2">"I know my %s %s %s's"</span> <span class="o">%</span> <span class="o">[</span><span class="n">one</span><span class="p">,</span> <span class="n">two</span><span class="p">,</span> <span class="n">three</span><span class="o">]</span>
+<span class="nb">puts</span> <span class="nb">format</span> <span class="o">%</span> <span class="o">[</span><span class="n">one</span><span class="p">,</span> <span class="n">two</span><span class="p">,</span> <span class="n">three</span><span class="o">]</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-25" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="nb">puts</span> <span class="n">one</span> <span class="o">+</span> <span class="n">two</span> <span class="o">+</span> <span class="n">three</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-26" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="nb">puts</span> <span class="n">one</span> <span class="o">+</span> <span class="s2">" "</span> <span class="o">+</span> <span class="n">two</span> <span class="o">+</span> <span class="s2">" "</span> <span class="o">+</span> <span class="n">three</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-27" class="content">
+              <p>What happens if you assign a variable, but don't use it?</p><p>What happens if you try to use a variable that you haven't assigned?</p>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-28" class="content">
+              <h2>Asking Questions, Getting Answers</h2>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-29" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="nb">print</span> <span class="s2">"What is your name? "</span>
+<span class="nb">name</span> <span class="o">=</span> <span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span>
+<span class="nb">puts</span> <span class="s2">"Oh, your name is </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">."</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-30" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="nb">print</span> <span class="s2">"Give me a number: "</span>
+<span class="n">number</span> <span class="o">=</span> <span class="nb">Integer</span><span class="p">(</span><span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span><span class="p">)</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-31" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="nb">print</span> <span class="s2">"Give me a number: "</span>
+<span class="n">number</span> <span class="o">=</span> <span class="nb">Integer</span><span class="p">(</span><span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="s2">"What is your favorite food? "</span>
+<span class="n">food</span> <span class="o">=</span> <span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span>
+
+<span class="nb">puts</span> <span class="s2">"I ate %d %s yesterday."</span> <span class="o">%</span> <span class="o">[</span><span class="n">number</span><span class="p">,</span> <span class="n">food</span><span class="o">]</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-32" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="nb">print</span> <span class="s2">"Prints keeps everything on the same line, but... "</span>
+<span class="nb">puts</span> <span class="s2">"Puts starts a new line after it prints."</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-33" class="content">
+              <h2>Making Decisions</h2>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-34" class="content">
+              <ul>
+<li>&lt; Less Than</li>
+<li>&gt; Greater Than</li>
+<li>== Equal To</li>
+<li>&lt;= Less Than Or Equal To</li>
+<li>&gt;= Greater Than Or Equal To</li>
+<li>! Not (Opposite Of)</li>
+<li>!= Not Equal To</li>
+</ul>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-35" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="n">alice</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">bob</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="nb">puts</span> <span class="n">bob</span> <span class="o">&gt;</span> <span class="n">alice</span>     <span class="c1"># Is bob greater than alice?</span>
+<span class="nb">puts</span> <span class="n">bob</span> <span class="o">&lt;</span> <span class="n">alice</span>     <span class="c1"># Is bob less than alice?</span>
+<span class="nb">puts</span> <span class="n">bob</span> <span class="o">!=</span> <span class="n">alice</span>    <span class="c1"># Is bob not equal to alice?</span>
+<span class="nb">puts</span> <span class="o">!</span><span class="p">(</span><span class="n">bob</span> <span class="o">!=</span> <span class="n">alice</span><span class="p">)</span> <span class="c1"># The opposite of "is bob not equal to</span>
+                     <span class="c1"># alice?"</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-36" class="content">
+              <p>We can do a lot by just testing for <em>equality</em> (or matching)</p>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-37" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="n">potion</span> <span class="o">=</span> <span class="s2">"red"</span>
+<span class="n">sky</span> <span class="o">=</span> <span class="s2">"blue"</span>
+<span class="nb">puts</span> <span class="n">potion</span> <span class="o">==</span> <span class="s2">"blue"</span>
+<span class="nb">puts</span> <span class="n">sky</span> <span class="o">==</span> <span class="s2">"blue"</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-38" class="content">
+              <h2>If Statements</h2>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-39" class="content">
+              <pre><code>if statement
+    command to do
+end
+</code></pre>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-40" class="content">
+              <p>The <em>statement</em> tests whether something is true or false</p>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-41" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="k">if</span> <span class="n">bob</span> <span class="o">&gt;</span> <span class="n">alice</span>
+    <span class="nb">puts</span> <span class="s2">"bob is older than alice."</span>
+<span class="k">end</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-42" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="k">if</span> <span class="n">alice</span> <span class="o">==</span> <span class="mi">2</span>
+    <span class="nb">puts</span> <span class="s2">"Alice is 2."</span>
+
+    <span class="k">if</span> <span class="n">bob</span> <span class="o">&gt;</span> <span class="n">alice</span>
+        <span class="nb">puts</span> <span class="s2">"Bob is older than Alice."</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-43" class="content">
+              <h2>Else and Elsif</h2>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-44" class="content">
+              <p>If the statement is true, do something. If the statement is false, do something <em>else</em>.</p>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-45" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="k">if</span> <span class="n">statement</span>
+    <span class="n">command</span> <span class="n">to</span> <span class="k">do</span> <span class="k">if</span> <span class="n">statement</span> <span class="n">is</span> <span class="kp">true</span>
+<span class="k">else</span>
+    <span class="n">command</span> <span class="n">to</span> <span class="k">do</span> <span class="k">if</span> <span class="n">statement</span> <span class="n">is</span> <span class="kp">false</span>
+<span class="k">end</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-46" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="k">if</span> <span class="n">statement</span> <span class="mi">1</span>
+    <span class="n">command</span> <span class="n">to</span> <span class="k">do</span> <span class="k">if</span> <span class="n">statement</span> <span class="mi">1</span> <span class="n">is</span> <span class="kp">true</span>
+<span class="k">elsif</span> <span class="n">statement</span> <span class="mi">2</span>
+    <span class="n">command</span> <span class="n">to</span> <span class="k">do</span> <span class="k">if</span> <span class="n">statement</span> <span class="mi">2</span> <span class="n">is</span> <span class="kp">true</span>
+<span class="k">else</span>
+    <span class="n">command</span> <span class="n">to</span> <span class="k">do</span> <span class="k">if</span> <span class="n">all</span> <span class="n">statements</span> <span class="n">are</span> <span class="kp">false</span>
+<span class="k">end</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-47" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="nb">puts</span> <span class="s2">"You are in a large room."</span>
+<span class="nb">puts</span> <span class="s2">"There are two potions: red and blue."</span>
+<span class="nb">puts</span> <span class="s2">"Which do you drink (red or blue)?"</span>
+
+<span class="n">potion</span> <span class="o">=</span> <span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span>
+
+<span class="k">if</span> <span class="n">potion</span><span class="o">.</span><span class="n">downcase</span> <span class="o">==</span> <span class="s2">"red"</span>
+    <span class="nb">puts</span> <span class="s2">"You drink the red potion."</span>
+    <span class="nb">puts</span> <span class="s2">"You burn in a conflagration of flames."</span>
+<span class="k">elsif</span> <span class="n">potion</span><span class="o">.</span><span class="n">downcase</span> <span class="o">==</span> <span class="s2">"blue"</span>
+    <span class="nb">puts</span> <span class="s2">"You drink the blue potion."</span>
+    <span class="nb">puts</span> <span class="s2">"You freeze in a column of ice."</span>
+<span class="k">else</span>
+    <span class="nb">puts</span> <span class="s2">"Goodbye."</span>
+<span class="k">end</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-48" class="content">
+              <p>Now we're getting somewhere interesting.</p>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-49" class="content">
+              <h2>Functions - Programs Within Programs</h2>
+            </div>
+          </div>
+        
       </div>
     </div>
   </body>
