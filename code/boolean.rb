@@ -8,6 +8,6 @@ puts !(bob != alice) # The opposite of "is bob not equal to
                      # alice?"
 
 potion = "red"
-sky = "blue
+sky = "blue"
 puts potion == "blue"
 puts sky == "blue"

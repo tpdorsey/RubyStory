@@ -335,7 +335,7 @@ We don't need to print out "true" or "false". We can just use that value to deci
 Let's try a simpler example. For strings, the letters are either the same as what we expect or they're not:
 
     potion = "red"
-    sky = "blue
+    sky = "blue"
     puts potion == "blue"
     puts sky == "blue"
 
