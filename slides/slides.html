@@ -5284,7 +5284,300 @@ end
         
           <div class="">
             <div id="slide-49" class="content">
-              <h2>Functions - Programs Within Programs</h2>
+              <h2>Functions - Programs Within Programs</h2><p>Functions are little programs that we write within a bigger program. We write them once and can use them over and over.</p>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-50" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="k">def</span> <span class="nf">function_name</span>
+    <span class="n">command</span> <span class="n">to</span> <span class="k">do</span>
+<span class="k">end</span> 
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-51" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="k">def</span> <span class="nf">starting</span>
+    <span class="nb">puts</span> <span class="s2">"Once upon a time..."</span>
+<span class="k">end</span> 
+
+<span class="n">starting</span> <span class="c1"># prints "Once upon a time..."</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-52" class="content">
+              <p>Functions can take <strong>arguments</strong>, variables you give to the function to use.</p>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-53" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="k">def</span> <span class="nf">friend</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="s2">"My friend is "</span> <span class="o">+</span> <span class="nb">name</span>
+<span class="k">end</span> 
+
+<span class="n">friend</span><span class="p">(</span><span class="s2">"Quinn"</span><span class="p">)</span> <span class="c1"># prints "My friend is Quinn"</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-54" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="k">def</span> <span class="nf">friend</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="s2">"My friend is "</span> <span class="o">+</span> <span class="nb">name</span>
+<span class="k">end</span>
+
+<span class="n">my_friend</span> <span class="o">=</span> <span class="s2">"Quinn"</span>
+<span class="n">friend</span><span class="p">(</span><span class="n">my_friend</span><span class="p">)</span> 
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-55" class="content">
+              <p>Functions can do work and return a value.</p>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-56" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="k">def</span> <span class="nf">friend</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+    <span class="n">capitalized_name</span> <span class="o">=</span> <span class="nb">name</span><span class="o">.</span><span class="n">upcase</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="s2">"Shouting my friend's name: "</span> <span class="o">+</span> <span class="n">capitalized_name</span>
+    <span class="k">return</span> <span class="n">words</span>
+<span class="k">end</span> 
+
+<span class="n">friend</span><span class="p">(</span><span class="s2">"Quinn"</span><span class="p">)</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-57" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="k">def</span> <span class="nf">colors</span><span class="p">(</span><span class="n">your_color</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">your_color</span> <span class="o">==</span> <span class="s2">"purple"</span>
+        <span class="nb">puts</span> <span class="s2">"I love purple, too!"</span>
+    <span class="k">else</span>
+        <span class="nb">puts</span> <span class="s2">"That's a nice color (yawn)..."</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="nb">print</span> <span class="s2">"What's your favorite color? "</span>
+<span class="n">your_color</span> <span class="o">=</span> <span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span>
+
+<span class="n">colors</span><span class="p">(</span><span class="n">your_color</span><span class="p">)</span> 
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-58" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="k">def</span> <span class="nf">prompt</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="n">question</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span>
+    <span class="k">return</span> <span class="n">answer</span><span class="o">.</span><span class="n">downcase</span>
+<span class="k">end</span>
+
+<span class="n">your_color</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s2">"What's your favorite color? "</span><span class="p">)</span>
+<span class="n">colors</span><span class="p">(</span><span class="n">your_color</span><span class="p">)</span> 
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-59" class="content">
+              <h2>Functions and Global Variables</h2><p>The variables we've used so far are <strong>local variables</strong>. Local variables can be used only within the current function.</p>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-60" class="content">
+              <p>There are <strong>global variables</strong> that can be used anywhere in your program.</p><p>Global variable names start with a $ character.</p>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-61" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="vg">$global_variable</span> <span class="o">=</span> <span class="s2">"You can use this anywhere."</span> 
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-62" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="vg">$name</span> <span class="o">=</span> <span class="s2">"Charlie"</span>
+
+<span class="k">def</span> <span class="nf">friends</span>
+    <span class="nb">puts</span> <span class="s2">"My friend is "</span> <span class="o">+</span> <span class="vg">$name</span>
+    <span class="vg">$name</span> <span class="o">=</span> <span class="s2">"Barbara"</span>
+<span class="k">end</span>
+
+<span class="n">friends</span>
+<span class="n">friends</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-63" class="content">
+              <h2>A Story Program</h2><p>Now let's put everything we've learned so far together. We'll tell a story, and let the person who runs the program make choices about how the story proceeds.</p>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-64" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="nb">puts</span> <span class="s2">"There are two potions: red and blue."</span>
+<span class="nb">puts</span> <span class="s2">"Which do you drink?"</span>
+<span class="n">potion</span> <span class="o">=</span> <span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span> 
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-65" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="k">if</span> <span class="n">potion</span><span class="o">.</span><span class="n">downcase</span> <span class="o">==</span> <span class="s2">"red"</span>
+    <span class="nb">puts</span> <span class="s2">"You drink the red potion."</span>
+    <span class="nb">puts</span> <span class="s2">"You burn in a conflagration of flames."</span>
+<span class="k">elsif</span> <span class="n">potion</span><span class="o">.</span><span class="n">downcase</span> <span class="o">==</span> <span class="s2">"blue"</span>
+    <span class="nb">puts</span> <span class="s2">"You drink the blue potion."</span>
+    <span class="nb">puts</span> <span class="s2">"You freeze in a column of ice."</span>
+<span class="k">else</span>
+    <span class="nb">puts</span> <span class="s2">"Goodbye."</span>
+<span class="k">end</span> 
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-66" class="content">
+              <p>A nice start, but two problems:</p><ul>
+<li>Nothing interesting happens if they type the wrong thing.</li>
+<li>If we make the story longer, we have to repeat the question-and-answer code over and over.</li>
+</ul>
+<p>Let's fix that by making a function that asks the question</p>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-67" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="k">def</span> <span class="nf">prompt</span><span class="p">(</span><span class="n">choice_1</span><span class="p">,</span> <span class="n">choice_2</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="s2">"(Type "</span> <span class="o">+</span> <span class="n">choice_1</span> <span class="o">+</span> <span class="s2">" or "</span> <span class="o">+</span> <span class="n">choice_2</span> <span class="o">+</span> <span class="s2">") &gt; "</span>
+<span class="k">end</span>
+
+<span class="n">prompt</span><span class="p">(</span><span class="s2">"red"</span><span class="p">,</span> <span class="s2">"blue"</span><span class="p">)</span> 
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-68" class="content">
+              <p>Better. What if the prompt function could do more, like print the question, chomp the answer and return it already converted to lowercase?</p>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-69" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="k">def</span> <span class="nf">prompt</span><span class="p">(</span><span class="n">choice_1</span><span class="p">,</span> <span class="n">choice_2</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="s2">"(Type %s or %s): "</span> <span class="o">%</span> <span class="o">[</span><span class="n">choice_1</span><span class="p">,</span> <span class="n">choice_2</span><span class="o">]</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span>
+    <span class="k">return</span> <span class="n">answer</span><span class="o">.</span><span class="n">downcase</span>
+<span class="k">end</span> 
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-70" class="content">
+              <p>This is a good example of a good rule in programming: <strong>don't repeat yourself</strong> (DRY).</p>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-71" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="k">def</span> <span class="nf">start</span>
+    <span class="nb">puts</span> <span class="s2">"There are red and green potions on the table."</span>
+    <span class="nb">puts</span> <span class="s2">"Which one do you drink?"</span>
+    <span class="n">potion</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s2">"red"</span><span class="p">,</span> <span class="s2">"green"</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">potion</span> <span class="o">==</span> <span class="s2">"red"</span>
+        <span class="nb">puts</span> <span class="s2">"You drink the red potion."</span>
+        <span class="nb">puts</span> <span class="s2">"Fire burns your brain."</span>
+    <span class="k">elsif</span> <span class="n">potion</span> <span class="o">==</span> <span class="s2">"green"</span>
+        <span class="nb">puts</span> <span class="s2">"You drink the green potion."</span>
+        <span class="nb">puts</span> <span class="s2">"Moss grows on your toes."</span>
+    <span class="k">else</span>
+        <span class="nb">puts</span> <span class="s2">"You didn't answer the question."</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">start</span> 
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-72" class="content">
+              <p>You just have to call one function, start, and the story begins.</p>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-73" class="content">
+              <p>Using the same <strong>pattern</strong>, add more functions for more parts of the story.</p>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-74" class="content">
+              <p>Because we made prompt abstract it can be used anywhere in the story. We just have to tell it which options to allow.</p>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-75" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="k">def</span> <span class="nf">water</span>
+    <span class="nb">puts</span> <span class="s2">"You see a glass of water."</span>
+    <span class="nb">puts</span> <span class="s2">"Do you drink it or pour it on your head?"</span>
+    <span class="n">glass</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s2">"drink"</span><span class="p">,</span> <span class="s2">"pour"</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">glass</span> <span class="o">==</span> <span class="s2">"drink"</span>
+        <span class="nb">puts</span> <span class="s2">"You drink the water."</span>
+        <span class="nb">puts</span> <span class="s2">"Ahhhh! Refreshing!"</span>
+    <span class="k">elsif</span> <span class="n">glass</span> <span class="o">==</span> <span class="s2">"pour"</span>
+        <span class="nb">puts</span> <span class="s2">"You pour the water on your head."</span>
+        <span class="nb">puts</span> <span class="s2">"Your brain is cooler now."</span>
+    <span class="k">else</span>
+        <span class="nb">puts</span> <span class="s2">"You can't do that. Your brain is still burning."</span>
+    <span class="k">end</span>
+<span class="k">end</span> 
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-76" class="content">
+              <div class="highlight ruby code highlight"><pre><span class="k">if</span> <span class="n">potion</span> <span class="o">==</span> <span class="s2">"red"</span>
+    <span class="nb">puts</span> <span class="s2">"You drink the red potion."</span>
+    <span class="nb">puts</span> <span class="s2">"Fire burns your brain."</span>
+    <span class="n">water</span> 
+<span class="k">end</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-77" class="content">
+              <p>By adding new functions, along with questions and answers that call them, you can extend the story as long as you like.</p>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-78" class="content">
+              <p>When you're finished, give the .rb file to some friends and show them how to run your game.</p>
             </div>
           </div>
         
